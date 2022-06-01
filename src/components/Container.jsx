@@ -6,26 +6,29 @@ const Container = ({ data }) => {
         <div className="container">
             <div className="top">
                 <div className="location">
-                    <p><strong>{location.name}, {location.region}</strong></p>
+                    <p className="bold">{location.name}, {location.region}</p>
                     <small>{location.country}</small>
                 </div>
                 <div className="temp">
                     <h1>{current.temp_f}°F</h1>
                 </div>
                 <div className="description">
-                    <p><strong>{current.condition.text}</strong></p>
+                    <p className="bold">{current.condition.text}</p>
                     <img src={current.condition.icon} />
                 </div>
             </div>
             <div className="bottom">
                 <div className="feels">
-                    <p>Feels Like: <strong>{current.feelslike_f}°F</strong></p>
+                    <p className="bold">{current.feelslike_f}°F</p>
+                    <p>Feels Like</p>
                 </div>
                 <div className="humidity">
-                    <p>Humidity: <strong>{current.humidity}%</strong></p>
+                    <p className="bold">{current.humidity}%</p>
+                    <p>Humidity</p>
                 </div>
                 <div className="wind">
-                    <p>Wind Speed: <strong>{current.wind_mph}</strong> mph <strong>{current.wind_dir}</strong></p>
+                    <p className="bold">{current.wind_mph} mph {current.wind_dir}</p> 
+                    <p>Wind </p>
                 </div>
             </div>
         </div>

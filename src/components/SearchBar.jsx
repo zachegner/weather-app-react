@@ -1,15 +1,17 @@
-const SearchBar = ({ zipCode, setZipCode, searchZipCode}) => {
+const SearchBar = ({ code, setCode, searchCode}) => {
 
     return (
         <>
             <div className="search">
+                <label htmlFor="searchbar">Enter zipcode, city name, postcode, or Latitute and Longitude(e.g: 48.8567,2.3508)</label><br/><br/>
                 <input
-                    value={zipCode}
-                    onChange={e => setZipCode(e.target.value)}
-                    placeholder='Enter Zipcode'
-                    onKeyDown={searchZipCode}
-                    type="text" />
-            </div>
+                    value={code}
+                    onChange={e => setCode(e.target.value)}
+                    placeholder='Enter code here'
+                    onKeyDown={searchCode}
+                    type="text"
+                    id="searchbar" />
+            </div><br/>
         </>
     );
 };
