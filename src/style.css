@@ -79,6 +79,9 @@
   .app .top {
     width: 100%;
     margin: 1rem auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
   }
   
   .app .description {
